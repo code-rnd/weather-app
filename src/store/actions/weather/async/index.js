@@ -1,18 +1,33 @@
-import { setWeather } from "..";
-import { weatherStackApi } from "../../../../api/weatherstack";
+import { setWeather, requestFailed } from "..";
+import { weatherbitApi } from "../../../../api/weatherbit";
 import { setIsToggleLoading } from "../../appConfig";
+import { setDataCurrnetCity } from "../../currentCity";
 
 export const getWeather = city => {
   return dispatch => {
     dispatch(setIsToggleLoading(true));
 
-    weatherStackApi
+    weatherbitApi
       .getWeather(city)
       .then(data => {
         dispatch(setIsToggleLoading(false));
-        dispatch(setWeather(data.current));
+        dispatch(setWeather(data));
+
+        dispatch(
+          setDataCurrnetCity({
+            weather: data.temp,
+            name: city
+          })
+        );
       })
-      .catch(data => {
+      .catch(error => {
+        dispatch(requestFailed({ temperature: null }));
+        dispatch(
+          setDataCurrnetCity({
+            weather: null,
+            name: city
+          })
+        );
         dispatch(setIsToggleLoading(false));
       });
   };

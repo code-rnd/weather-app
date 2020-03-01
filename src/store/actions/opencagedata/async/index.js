@@ -1,20 +1,20 @@
-import { setAddress } from "..";
 import { opencagedata } from "../../../../api/opencagedata";
 import { getWeather } from "../../weather/async";
+import { setIsToggleLoading } from "../../appConfig";
 
 export const getAddress = (lat, lng) => {
   return dispatch => {
-    // dispatch(toggleIsFetching(true));
+    dispatch(setIsToggleLoading(true));
 
     opencagedata
       .getAddress(lat, lng)
       .then(data => {
-        // dispatch(toggleIsFetching(false));
-        dispatch(setAddress(data));
         dispatch(getWeather(data.components.city));
+
+        dispatch(setIsToggleLoading(false));
       })
-      .catch(data => {
-        // dispatch(toggleIsFetching(false));
+      .catch(error => {
+        dispatch(setIsToggleLoading(false));
       });
   };
 };

@@ -1,0 +1,15 @@
+.display {
+  position: fixed;
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  font-size: 35px;
+
+  .informMenu-temperature {
+    display: flex;
+    justify-content: center;
+  }
+}
