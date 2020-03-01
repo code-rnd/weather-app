@@ -5,7 +5,7 @@ export const instance = axios.create({
 });
 
 export const opencagedata = {
-  key: "46c3cf317a3e408a88ccefa30701b1e5",
+  key: "",
 
   getAddress(lat, lng) {
     return instance
