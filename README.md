@@ -1,9 +1,10 @@
 # weather-app
+weather-app: cra + redux + thunk + axios(weatherstack, opencagedata)
 
-weather-app: пишу на базе default-app
+Собираю приложение, для отображения пронгоза погоды <br>
+По текущей геолокации\указанному городу <br>
 
 # Развернуть фронт локально
-
 <ul>
   <li>Склонируйте ветку <code>dev</code></li>
   <li><code>npm install</code></li>
@@ -19,4 +20,4 @@ weather-app: пишу на базе default-app
  </ul>
  
  # Демо проекта
- https://code-rnd.github.io/weather-app
+ Билда не будет - пока не придумаю, где буду хранить ключи для работы апишек
