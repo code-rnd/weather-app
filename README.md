@@ -1,6 +1,3 @@
-# Демо проекта
- https://code-rnd.github.io/weather-app/
- 
 # weather-app
 weather-app: cra + redux + thunk + axios(weatherbit, opencagedata)
 
@@ -22,3 +19,6 @@ weather-app: cra + redux + thunk + axios(weatherbit, opencagedata)
   <li><code>npm run build</code></li>
   <li>Каталог билда, лежит в корне проекта (./build/)</li>
  </ul>
+
+# Демо проекта
+ https://code-rnd.github.io/weather-app/
