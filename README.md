@@ -1,5 +1,5 @@
 # weather-app
-weather-app: cra + redux + thunk + axios(weatherbit, opencagedata)
+weather-app: cra + redux + thunk + axios(weatherbit, opencagedata) + typescript
 
 Собираю приложение, для отображения пронгоза погоды <br>
 По текущей геолокации\указанному городу <br>
