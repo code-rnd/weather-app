@@ -8,8 +8,10 @@
   color: #fff;
   font-size: 35px;
 
-  .informMenu-temperature {
-    display: flex;
-    justify-content: center;
+  .informMenu {
+    div {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
