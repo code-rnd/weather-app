@@ -1,0 +1,31 @@
+body {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #212529;
+  transition: 0.5s all;
+
+  .root {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .margin-top20px {
+    margin-top: 20px;
+  }
+
+  .margin-bottom20px {
+    margin-bottom: 20px;
+  }
+
+  .max-size {
+    max-width: 40%;
+    max-height: 20%;
+  }
+
+  .disabled {
+    pointer-events: none !important;
+  }
+}
